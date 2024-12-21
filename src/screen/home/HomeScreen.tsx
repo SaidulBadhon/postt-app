@@ -2,13 +2,15 @@ import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import HomeHeader from "./_components/HomeHeader";
 import QuickSearchBar from "../../components/QuickSearchBar";
 import Socialbar from "./_components/Socialbar";
+import InfoCards from "./_components/InfoCards";
+import UpcomingPost from "./_components/UpcomingPost";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView>
       <HomeHeader />
 
-      <ScrollView scrollEnabled={false} style={{ padding: 16 }}>
+      <ScrollView scrollEnabled={true} style={{ padding: 16 }}>
         <View style={{ gap: 8 }}>
           <Text style={{ fontSize: 24, fontWeight: "normal", color: "gray" }}>
             Hello,
@@ -20,6 +22,11 @@ export default function HomeScreen() {
         </View>
 
         <QuickSearchBar />
+
+        <InfoCards />
+
+        {/*  */}
+        <UpcomingPost />
 
         {/*  */}
         <Socialbar />
